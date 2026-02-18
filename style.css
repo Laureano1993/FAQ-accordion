@@ -19,7 +19,7 @@ body{
 }
 
 .page{
-    height: calc(100vh - 21px);
+    min-height: calc(100vh - 21px);
     background-color: var(--purple100);
 }
 
