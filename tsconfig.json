@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",    // Dónde están tus archivos .ts
+    "outDir": "./dist",   // Dónde se guardará el JavaScript
+    "target": "ES6",      // Versión de JS a generar
+    "module": "CommonJS"  // Sistema de módulos
+  }
+}

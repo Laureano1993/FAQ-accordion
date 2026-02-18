@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --white: hsl(0, 100%, 100%);
+    --purple100: hsl(275, 100%, 97%);
+    --purple600: hsl(292, 16%, 49%);
+    --purple950: hsl(292, 42%, 14%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans",sans-serif;
+}
+
+.page{
+    height: calc(100vh - 21px);
+    background-color: var(--purple100);
+}
+
+header{
+    position: relative;
+    height: 35vh;
+    background-color: var(--purple950);
+    background-image: url("assets/images/background-pattern-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+.accordion{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 550px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgba(140, 105, 145,.3);
+    background-color: var(--white);
+}
+
+.accordion__title{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#img-star{
+    width: 20px;
+    margin-right: 1rem;
+}
+
+.container{
+    max-height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem 0;
+    transition: max-height .2s linear;
+}
+
+.container.show{
+    max-height: 150px;
+    overflow: visible;
+}
+
+.container__switch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.switch{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.plus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .2s linear;
+}
+
+.plus.show{
+    opacity: 0;
+}
+
+.minus{
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.minus.show{
+    opacity: 1;
+}
+
+.title{
+    cursor: pointer;
+}
+
+.title:hover{
+    color: var(--purple950);
+}
+
+.info{
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+
+.info.show{
+    opacity: 1;
+}
+
+.text{
+    font-size: .8rem;
+    line-height: 1.3rem;
+    color: var(--purple600);
+}
+
+@media screen and (min-width: 768px){
+    header{
+        background-image: url("assets/images/background-pattern-desktop.svg");
+        background-position: center;
+    }
+}
